@@ -35,7 +35,7 @@ const controls = new OrbitControls(camera, renderer.domElement);
 
 function animate() {
     requestAnimationFrame(animate);
-    if (object) object.rotation.y += 0.01;
+    if (object) object.rotation.y += 0.001;
     renderer.render(scene, camera);
 }
 animate();
@@ -44,4 +44,5 @@ window.addEventListener("resize", () => {
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
     renderer.setSize(window.innerWidth, window.innerHeight);
+
 });
